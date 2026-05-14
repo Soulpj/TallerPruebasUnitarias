@@ -6,14 +6,16 @@ namespace Course.UnitTest;
 
 public class CustomerTests
 {
-    [Fact]
-    public void Constructor_WhenDataIsValid_ShouldCreateCustomer()
+    [Theory]
+    [InlineData("john.doe@bch.hn")]
+    //[InlineData("jane.doe@bch.hn")]
+    public void Constructor_WhenDataIsValid_ShouldCreateCustomer(string email)
     {
         // Arrange
         var id = Guid.NewGuid();
 
         // Act
-        Customer customer = new(id, "John Doe", "john.doe@bch.hn");
+        Customer customer = new(id, "John Doe", email);
 
 
         Assert.Equal(id, customer.Id);
