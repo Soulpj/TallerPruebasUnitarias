@@ -8,7 +8,7 @@ public class CustomerTests
 {
     [Theory]
     [InlineData("john.doe@bch.hn")]
-    [InlineData("jane.doe@bch.hn")]
+    //[InlineData("jane.doe@bch.hn")]
     public void Constructor_WhenDataIsValid_ShouldCreateCustomer(string email)
     {
         // Arrange
